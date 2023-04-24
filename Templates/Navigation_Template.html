@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navigatie</title>
+    <link rel="stylesheet" type="text/css" href="Templates/style.css">
+    {% if include_js %}
+    <script>
+      {{ include_js }}
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#archief">Tags archief</a></li>
+        <li style="float:right;"><a href="about.html">About</a></li>
+        <li style="float:right;"><a href="contact.html">Contact</a></li>
+        <li style="float:right;"><a href="services.html">Services</a></li>
+        <li style="float:right;"><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Pages</h1>
+      <div>
+        <ul id="pages">
+        </ul>
+      </div>
+      <h1>Posts</h1>
+      <ul id="posts">
+      </ul>
+    </div>
+    <div class="container">
+      <h1 id="archief">Tags Archief</h1>
+          <h2>Tags</h2>
+          <ul id="Tags">
+          </ul>
+          <h2>Category</h2>
+          <ul id="Category">
+          </ul>
+    </div>
+  </body>
+</html>

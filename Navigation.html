@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navigatie</title>
+    <link rel="stylesheet" type="text/css" href="Templates/style.css">
+    
+    <script>
+      
+document.addEventListener("DOMContentLoaded", function() {
+  var pages = ['_site\\pages\\AI in de schoolomgeving.html', '_site\\pages\\Automatisering in de industrie.html', '_site\\pages\\Blockchain en de toekomst van de overheid.html', '_site\\pages\\Slimme steden en transport.html', '_site\\pages\\Toepassingen van Machine Learning in de gezondheidszorg.html']
+  var posts = ['_site\\posts\\De opkomst van cybersecurity bedreigingen.html', '_site\\posts\\De toekomst van Virtual Reality.html', '_site\\posts\\Hoe kunstmatige intelligentie de gezondheidszorg kan transformeren.html', "_site\\posts\\OpenAI's Laatste Doorbraken in Kunstmatige Intelligentie.html", "_site\\posts\\SpaceX's Nieuwste Ontwikkelingen in Ruimtevaarttechnologie.html"]
+  var namePages = ['AI in de schoolomgeving', 'Automatisering in de productie-industrie', 'Blockchain en de toekomst van de overheid', 'Slimme steden en transport', 'Toepassingen van Machine Learning in de gezondheidszorg']
+  var namePosts = ['De opkomst van cybersecurity bedreigingen', 'De toekomst van Virtual Reality', 'Hoe kunstmatige intelligentie de gezondheidszorg kan transformeren', "OpenAI's Laatste Doorbraken in Kunstmatige Intelligentie", "SpaceX's Nieuwste Ontwikkelingen in Ruimtevaarttechnologie"]
+  var TagsList = ['onderwijs, AI, technologie', 'automatisering, productie, industrie, technologie', 'blockchain, overheid, technologie, veiligheid', 'IoT, transport, slimme steden, technologie', 'machine learning, gezondheidszorg, technologie, diagnose', 'cybersecurity, hacking, privacy', 'VR, gaming, entertainment', 'Kunstmatige intelligentie, Gezondheidszorg, Machine learning', 'OpenAI, kunstmatige intelligentie, machine learning, GPT-3, neurale netwerken', 'SpaceX, ruimtevaart, raketten, Mars, NASA']
+  var CategoryList = ['Cybersecurity', 'VR', 'AI', 'AI', 'Technologie']
+  
+   for (var i = 0; i < pages.length; i++) {
+    pages[i] = pages[i].replace('\\', '/');
+    var link = document.createElement("a");
+    link.href = pages[i];
+    link.appendChild(document.createTextNode(namePages[i]));
+
+    var li = document.createElement("li");
+    li.appendChild(link);
+
+    var pagesUl = document.getElementById("pages");
+    pagesUl.appendChild(li);
+  }
+
+  for (var i = 0; i < posts.length; i++) {
+    posts[i] = posts[i].replace('\\', '/');
+    var link = document.createElement("a");
+    link.href = posts[i];
+    link.appendChild(document.createTextNode(namePosts[i]));
+
+    var li = document.createElement("li");
+    li.appendChild(link);
+
+    var postsUl = document.getElementById("posts");
+    postsUl.appendChild(li);
+  }
+  
+  for (var i = 0; i < pages.length; i++) {
+                        pages[i] = pages[i].replace('\\', '/');
+                        var link = document.createElement("a");
+                        link.href = pages[i];
+                        link.appendChild(document.createTextNode(TagsList[i]));
+
+                        var li = document.createElement("li");
+                        li.appendChild(link);
+
+                        var pagesUl = document.getElementById("Tags");
+                        pagesUl.appendChild(li);
+                    }
+
+                    for (var i = 0; i < posts.length; i++) {
+                        posts[i] = posts[i].replace('\\', '/');
+                        var link = document.createElement("a");
+                        link.href = posts[i];
+                        link.appendChild(document.createTextNode(CategoryList[i]));
+
+                        var li = document.createElement("li");
+                        li.appendChild(link);
+
+                        var postsUl = document.getElementById("Category");
+                        postsUl.appendChild(li);
+                    }
+  
+});
+    
+    </script>
+    
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#archief">Tags archief</a></li>
+        <li style="float:right;"><a href="about.html">About</a></li>
+        <li style="float:right;"><a href="contact.html">Contact</a></li>
+        <li style="float:right;"><a href="services.html">Services</a></li>
+        <li style="float:right;"><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Pages</h1>
+      <div>
+        <ul id="pages">
+        </ul>
+      </div>
+      <h1>Posts</h1>
+      <ul id="posts">
+      </ul>
+    </div>
+    <div class="container">
+      <h1 id="archief">Tags Archief</h1>
+          <h2>Tags</h2>
+          <ul id="Tags">
+          </ul>
+          <h2>Category</h2>
+          <ul id="Category">
+          </ul>
+    </div>
+  </body>
+</html>
